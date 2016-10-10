@@ -11,5 +11,12 @@ app = Flask(__name__)
 def profile(name=None):
     return render_template("profile.html",name=name)
 
+#shopping page
+@app.route('/shopping')
+def shopping():
+    food = ['Cheese', 'Peas', 'Chicken']
+    return render_template('shopping.html', food=food)
+
 if __name__ == "__main__":
     app.run(debug=True)
+__author__ = 'Varun'
